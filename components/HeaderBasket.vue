@@ -1,20 +1,24 @@
 <template>
-  <div class="mini-basket-wrapper">
+  <div>
     <link
       v-if="brandCssLink"
       rel="stylesheet"
       :href="brandCssLink"
       type="text/css"
     />
-    <tef-icon cloak icon="cart" size="xl"></tef-icon>
-    <span class="number-of-items">{{ numberOfItems }}</span>
+    <div class="mini-basket-wrapper">
+      <tef-icon cloak icon="cart" size="xl"></tef-icon>
+      <span class="number-of-items">{{ numberOfItems }}</span>
+    </div>
+    <script :src="iconComponentLink"></script>
+    <script :src="occlLink"></script>
   </div>
 </template>
 
 <script>
 export default {
   props: {
-    brandId: Number,
+    brandId: String,
     numberOfItems: Number,
   },
   data() {
@@ -24,8 +28,14 @@ export default {
   },
   computed: {
     // eslint-disable-next-line object-shorthand
-    brandCssLink: function () {
+    brandCssLink() {
       return `https://library.telefonica.de/${this.brandId}/v1.5.0/components/theme/bundle.css`
+    },
+    iconComponentLink() {
+      return `https://library.telefonica.de/${this.brandId}/v1.5.0/components/icon/bundle.js`
+    },
+    occlLink() {
+      return `https://library.telefonica.de/${this.brandId}/v1.5.0/library/vendors.js`
     },
   },
 }
