@@ -22,10 +22,9 @@ export default {
 <style lang="scss" scopped>
 .toolbar {
   display: flex;
+  justify-content: center;
 
   .basket-icon-container {
-    margin: 15px;
-    margin-left: auto;
   }
 }
 </style>
