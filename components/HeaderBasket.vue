@@ -51,7 +51,6 @@ export default {
     right: 2px;
     background-color: #7814b3;
     border-radius: 50%;
-    padding: 2px;
     width: 15px;
     height: 15px;
     font-size: 11px;
