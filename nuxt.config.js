@@ -1,4 +1,9 @@
 export default {
+  vue: {
+    config: {
+      ignoredElements: ['tef-icon'],
+    },
+  },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'mini-basket',
@@ -11,6 +16,12 @@ export default {
       { hid: 'description', name: 'description', content: '' },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    script: [
+      { src: 'https://library.telefonica.de/2/v1.5.0/library/vendors.js' },
+      {
+        src: 'https://library.telefonica.de/2/v1.5.0/components/icon/bundle.js',
+      },
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
