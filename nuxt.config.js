@@ -1,9 +1,13 @@
 export default {
+  build: {
+    publicPath: '/MiniBasket/_nuxt/',
+  },
   vue: {
     config: {
       ignoredElements: ['tef-icon'],
     },
   },
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'mini-basket',
@@ -43,5 +47,4 @@ export default {
   axios: {},
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
 }
