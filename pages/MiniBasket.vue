@@ -2,7 +2,7 @@
   <div>
     <div class="toolbar">
       <div class="basket-icon-container">
-        <HeaderBasket :brand-id="brandId" :number-of-items="2"></HeaderBasket>
+        <HeaderBasket :brand-id="brandId"></HeaderBasket>
       </div>
     </div>
   </div>

@@ -22,11 +22,10 @@ import { ADD_TO_BASKET } from '@/constants/'
 export default {
   props: {
     brandId: String,
-    numberOfItems: Number,
   },
   data() {
     return {
-      title: 'Hi',
+      numberOfItems: 0,
     }
   },
 
@@ -44,14 +43,17 @@ export default {
   },
   mounted() {
     // create a function to subscribe to topics
-    const mySubscriber = function (msg, data) {
-      console.log('This is basket page', msg, data)
-    }
 
     // add the function to the list of subscribers for a particular topic
     // we're keeping the returned token, in order to be able to unsubscribe
     // from the topic later on
-    PubSub.subscribe(ADD_TO_BASKET, mySubscriber)
+    PubSub.subscribe(ADD_TO_BASKET, this.addToBasketSubscriber)
+  },
+  methods: {
+    addToBasketSubscriber(msg, data) {
+      this.numberOfItems = data
+      console.log('This is basket page', msg, data)
+    },
   },
 }
 </script>
