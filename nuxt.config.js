@@ -1,5 +1,10 @@
 export default {
+  globalName: 'miniBasket',
+  globals: {
+    id: (globalName) => '_idMiniBasket',
+  },
   build: {
+    //publicPath: 'http://localhost:1010/static/',
     publicPath: '/MiniBasket/_nuxt/',
   },
   vue: {
