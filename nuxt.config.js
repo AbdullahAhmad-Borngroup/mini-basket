@@ -12,6 +12,17 @@ export default {
       ignoredElements: ['tef-icon'],
     },
   },
+  router: {
+    extendRoutes(routes, resolve) {
+      routes.push({
+        name: 'custom',
+        path: '*',
+        component: resolve(__dirname, 'pages/MiniBasket.vue')
+      })
+    }
+  }
+  ,
+
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
