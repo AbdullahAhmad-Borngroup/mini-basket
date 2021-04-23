@@ -20,10 +20,7 @@ export default {
         component: resolve(__dirname, 'pages/MiniBasket.vue')
       })
     }
-  }
-  ,
-
-
+  },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'mini-basket',

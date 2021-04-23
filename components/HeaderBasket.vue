@@ -16,8 +16,8 @@
 </template>
 
 <script>
+import PubSub from 'pubsub-js'
 import { ADD_TO_BASKET } from '@/constants/'
-let PubSub
 
 export default {
   props: {
@@ -47,7 +47,6 @@ export default {
     // add the function to the list of subscribers for a particular topic
     // we're keeping the returned token, in order to be able to unsubscribe
     // from the topic later on
-    PubSub = window.PubSub || require('pubsub-js')
     PubSub.subscribe(ADD_TO_BASKET, this.addToBasketSubscriber)
   },
   methods: {
